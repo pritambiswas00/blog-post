@@ -1,0 +1,533 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+body{
+
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+h1, h2,h3,h4{
+    font-family: 'Open Sans', sans-serif;
+}
+a:link{
+    color: #000;
+}
+a:visited{
+    color: white;
+}
+.container{
+    min-height: 100%;
+    overflow: auto;
+    background-color: #d9d9d9;
+    background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
+}
+.main-container{
+    overflow: auto;
+  /* this will be the height of the footer */
+    position: relative;
+    /* padding: auto; */
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding-left: 3px;
+    padding-right: 3px;
+
+
+}
+nav{
+    position: fixed;
+    width: 29px;
+    margin-top: 150px;
+    box-shadow: -4px 4px 5px 0 rgba(0,0,0,.4);
+}
+nav li{
+    height: 20px;
+    position: relative;
+    justify-content: center;
+    
+}
+nav li a{
+    /* color: white; */
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    padding-left: 25%;
+    border-bottom: 1px solid rgba(0,0,0,.4);
+    justify-content: center;
+}
+nav li:nth-child(1) a{
+    background: #3b5998;
+}
+nav li:nth-child(2) a{
+    background:#8a3ab9;
+}
+nav li:nth-child(3) a{
+    background:#00acee;
+}
+nav li:nth-child(4) a{
+    background: #FF0000;
+}
+nav li a i{
+    position: absolute;
+    top: 1.05px;
+    
+}
+nav li a span{
+    font-weight: bold;
+    display: none;
+}
+
+
+/* //////////////// first Container////////////// */
+.first-container{
+    background-image: url(./kayak1.jpg);
+    padding: 5px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100%;
+    opacity: 0.8;
+    border-radius: 5px;
+    box-shadow: -30px 20px 30px rgba(0,0,0,0.3);
+ }
+.sub-heading{
+    margin-top: 21.2rem;
+    margin-left: 5rem;
+    box-shadow: -30px 20px 30px rgba(0,0,0,0.3);
+    margin-right: 10rem;
+    height: 12rem;
+    width: 30rem;
+    padding-left: 1rem;
+
+}
+.sub-heading h1 {
+      font-size: 42px;
+      font-weight: 200px;
+      margin-bottom: 10px;
+      color:white;
+      display: absolute;
+      opacity: 1;
+     
+}
+.sub-heading p{
+    font-size: 17px;
+    color: white;
+    display: absolute;
+    opacity: 1;
+}
+
+ .nav-bar{
+    display: flex;
+     height: 8vh;
+      background: none; 
+    background-color: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    margin-left: 27rem;
+    padding-top: 27px;
+    margin-top: 2rem;;
+    padding-right: 0.5rem;
+    text-decoration: none;
+    transform: translateY(-10px);
+    transition: all 0.7s ease;
+
+
+} 
+
+.nav-bar button,
+.blog{
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: justify;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: transform 0.4s;
+   
+    
+
+}
+
+.nav-bar button:hover, .blog:hover{
+    background-color: none;
+    border: none;
+   box-shadow: 0px 1px 0px #ACBEAD;
+   font-size: 19px;
+   transform: scale(1.02);
+   border-left: 1px solid  #ACBEAD;
+    
+
+}
+
+.best-kayakas, .reviews,.budget-kayaks,.gears , .fishing {
+    position: relative;
+}
+
+.best-kayakas ul,.reviews ul,.budget-kayaks ul,.gears ul, .fishing ul{
+    position: absolute;
+    margin: 5px 5px 5px 5px;
+    display: flex;
+    justify-content: left;
+    justify-items: left;
+    align-items: left;
+    flex-direction: column;
+    list-style:none;
+    border-radius: 7px;
+    padding: 2px 2px 2px 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    background-color: #e3efe8;
+    background-image: linear-gradient(315deg, #e3efe8 0%, #96a7cf 74%);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.7s ease;
+    
+}
+.best-kayakas li,.reviews li,.budget-kayaks li,.gears li,.fishing li{
+    background-color: none;
+   
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    border-radius: 7px;
+    padding: 0;
+    overflow: hidden;
+    
+
+
+
+}
+
+/* rgb 172, 190, 173   hex-code #ACBEAD */
+.best-kayakas li:hover,.reviews li:hover,.budget-kayaks li:hover,.gears li:hover,.fishing li:hover{
+    background-color: #fffffc;
+background-image: linear-gradient(315deg, #fffffc 0%, #beb7a4 74%);
+
+
+}
+.best-kayakas button:focus + ul,.reviews button:focus + ul,.budget-kayaks button:focus + ul,.gears button:focus + ul,.fishing button:focus + ul{
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(0px);
+    
+    
+}
+.best-kayakas a,.reviews a,.budget-kayaks a,.gears a, .fishing a{ 
+
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align: justify;
+    font-weight: 100%;
+}
+.best-kayakas ul{
+    
+    width:20rem;
+    height: 350px;
+}
+
+.reviews ul{
+    width:20rem;
+    height: 200px;
+}
+.budget-kayaks ul{
+    width: 20rem;
+    height: 110px;
+}
+.gears ul{
+    width: 20rem;
+    height: 370px;
+}
+.fishing ul{
+    width: 24rem;
+    height: 210px;
+}
+.search{
+    border-radius: 5px;
+    font-size: 17px;
+    margin-left: 1rem;
+}
+
+
+
+/* ////////.second-container/////////////////////////////////////////////// */
+.second-container{
+    justify-content: center;
+    align-items: center;
+    display: block;
+    position: absolute;
+    width: 70%;
+    height: 50rem;
+    margin-left: 14rem;
+
+}
+.sub-div h4{
+    text-align: center;
+    padding: 30px 0 30px 0;
+    margin: 10px 20px 10px 20px;
+    box-shadow: -2px 3px 10px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    background-color: rgb(190, 186, 186);
+    transition: all 0.5sec ease;
+    transform-style: preserve-3d;
+    color: grey;
+}
+.sub-div p{
+    justify-content: center;
+    text-align: center;
+    margin-top: 80px;
+    width: 35rem;
+    height: 30rem;
+    margin-left: 12rem;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    letter-spacing: 2px;
+    line-height: 30px;
+    word-spacing: 2px;
+    font-weight: 30%;
+    background-color: #d9d9d9;
+    background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
+    background-color: rgba(0,0,0,0.3);
+    transform-origin: left;
+    transform: skewY(3deg);
+    filter: blur(0px);
+    box-shadow: -30px 5px 10px rgba(0,0,0,0.3);
+    font-size: 20px;
+}
+.latest-kayaking-tips{
+    margin-top: 85px;
+    margin-right: 2rem;
+}
+.latest-kayaking-tips h2{
+    text-align: center;
+    justify-content: center;
+    text-shadow: 1px 1px rgb(3, 3, 3);
+    font-weight: bold;
+    border: 3px 1px black;
+
+}
+
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 20px;
+    margin-left: 2rem;
+    
+}
+.col-4{
+    flex-basis: 47%;
+    min-width: 260px;
+    margin-bottom: 50px;
+    box-shadow: -2px 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.4s;
+    height: 46vh;
+    border-radius: 10px;
+
+     
+}
+.col-4:hover{
+    transform: scale(1.06);
+}
+.col-4 img{
+    width: 80%;
+    transition: transform 0.2s;
+    border-radius: 10px;
+    margin-left: 3.5rem;
+    box-shadow: -2px 4px 10px rgba(0,0,0,0.3);
+
+}
+.col-4 img:hover{
+    transform: scale(1.05);
+    box-shadow: -20px 17px 10px rgba(0,0,0,0.3);
+}
+.col-4 h3{
+     margin-top: 0px;
+     color: #000;
+     justify-content: center;
+     text-align: center;
+
+}
+.col-4 a{
+    color: #000;
+    text-decoration: none;
+}
+
+.col-4 h3:hover{
+    text-shadow: 1px 1px rgb(61, 129, 59);
+}
+.sub-div{
+    margin-left: 1rem;
+    justify-content: center;
+    text-align: center;
+}
+/* /////////////Third Container////////////////// */
+
+.third-container{
+    justify-content: center;
+    align-items: center;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30rem;
+    top: 154rem;
+    background-color: rgb(172, 190, 173 ) ;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    z-index: 1;
+
+}
+
+.col-5{
+    flex-basis: 15%;
+    padding-top: 8px;
+    min-width: 100px;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.col-5 a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align: justify;
+    padding-top: 3px;
+
+}
+.rows{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 8rem;
+    width: 100%;
+}
+.rows ul{
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 11px;
+    width: 30rem;
+    height: 100px;
+    display: relative;
+
+}
+
+
+.rows a:hover{
+    color: rgb(61, 129, 59);
+
+}
+/* .col-5_post{
+    padding: 2rem 0 2rem 0;
+} */
+.col-5 button{
+    background: none;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 100%;
+    text-align: justify;
+    text-decoration: none;
+    border: 1px solid;
+}
+.col-5 button:hover{
+    color: rgb(61, 129, 59);
+    border:none;
+}
+.col-5 p{
+    text-align: center;
+    justify-content: center;
+    font-weight: 100%;
+    padding-top: 10px;
+    background: none;
+    margin-top: 7rem;
+}
+.subscribe{
+    display: block;
+    background-color: black;
+    width: 7rem;
+    height: 10rem;
+    padding-left: 0.8rem;
+    padding-top: 10px;
+    border-radius: 8px;
+    background-color: #fffffc;
+    background-image: linear-gradient(315deg, #fffffc 0%, #beb7a4 74%);
+    margin-top: 5px;
+    pointer-events: none;
+
+}
+.subscribe label{
+    width: 30px;
+    color: black;
+    font-weight: 200%;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2px;
+}
+.subscribe input{
+    margin-top: 5px;
+    font-size: 17px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.subscribe a button{
+    border: 1px solid  black;
+    margin-top: 17px;
+    margin-left: 6.9rem;
+    background-color: none;
+    font-size: 20px;
+    border-radius: 3px;
+    color: #000;
+    border-bottom: #000;
+    border-left: #000;
+}
+
+/* /////////////////Footer/////////////////////////// */
+
+.footer{
+    width: 99%;
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 184rem;
+    border: none;
+    background: #000000;
+    padding: 6px 2px 0 2px;
+    color: rgb(212, 212, 212);
+    z-index: 2;
+
+
+}
+.footer h5,h6{
+    text-align: center;
+}
+.footer h6{
+    margin-top: 3px;
+    /* box-shadow: px 1px 10px rgba(0,0,0,0.3); */
+    box-shadow: 0px 5px 10px 40px rgba(0,0,0,0.3);
+
+}
